@@ -33,6 +33,7 @@ import org.openmrs.Diagnosis;
 import org.openmrs.Drug;
 import org.openmrs.DrugOrder;
 import org.openmrs.Encounter;
+import org.openmrs.EncounterType;
 import org.openmrs.FreeTextDosingInstructions;
 import org.openmrs.GlobalProperty;
 import org.openmrs.MedicationDispense;
@@ -2642,7 +2643,7 @@ public class OrderServiceTest extends BaseContextSensitiveTest {
 			.configure().applySettings(configuration.getProperties()).build();
 
 		Metadata metaData = new MetadataSources(standardRegistry).addAnnotatedClass(Allergy.class)
-			.addAnnotatedClass(Encounter.class).addAnnotatedClass(SomeTestOrder.class)
+			.addAnnotatedClass(Encounter.class).addAnnotatedClass(SomeTestOrder.class).addAnnotatedClass(EncounterType.class)
 			.addAnnotatedClass(Diagnosis.class).addAnnotatedClass(Condition.class)
 			.addAnnotatedClass(Visit.class).addAnnotatedClass(VisitAttributeType.class)
 			.addAnnotatedClass(MedicationDispense.class)

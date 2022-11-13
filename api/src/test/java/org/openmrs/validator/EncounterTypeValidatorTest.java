@@ -141,7 +141,7 @@ public class EncounterTypeValidatorTest extends BaseContextSensitiveTest {
 	@Test
 	public void validate_shouldFailValidationIfFieldLengthsAreNotCorrect() {
 		EncounterType type = new EncounterType();
-		type.setName(StringUtils.repeat("longer than 50 chars", 6));
+		type.setName(StringUtils.repeat("longer than 50 chars", 15));
 		type.setDescription(StringUtils.repeat("longer than 1024 chars", 120));
 		type.setRetireReason(StringUtils.repeat("longer than 255 chars", 27));
 		
